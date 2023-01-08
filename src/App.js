@@ -10,7 +10,6 @@ import axios from 'axios';
 // let data = []
 
 function App() {
-  const [contacts, setContacts] = useState();
   const [search, setSearch] = useState('');
   const [data, setData] = useState([]);
   // const sortName = () => {
@@ -25,7 +24,6 @@ function App() {
   //   );
   // };
   const onClickHandler = async () => {
-    let resData = []
     console.log("came here")
     axios.get(`https://wide-eyed-gilet-fox.cyclic.app/sortedData`)
       .then(res => {
@@ -47,7 +45,6 @@ function App() {
 
 
   const onClickMagISBN = async () => {
-    let resData = []
     const isbn = search
     console.log("came here", search)
     axios.get(`https://wide-eyed-gilet-fox.cyclic.app/findByISBN?category=magazines&isbn=${isbn}`)
@@ -59,7 +56,6 @@ function App() {
     }
 
     const onClickBookISBN = async () => {
-      let resData = []
       const isbn = search
       console.log("came here", search)
       axios.get(`https://wide-eyed-gilet-fox.cyclic.app/findByISBN?category=books&isbn=${isbn}`)
@@ -71,7 +67,6 @@ function App() {
       }
 
     const onClickMagEmail = async () => {
-      let resData = []
       const email = search
       console.log("came here", search)
       axios.get(`https://wide-eyed-gilet-fox.cyclic.app/findByEmail?category=magazines&email=${email}`)
@@ -83,7 +78,6 @@ function App() {
       }
 
       const onClickBookEmail = async () => {
-        let resData = []
         const email = search
         console.log("came here", search)
         axios.get(`https://wide-eyed-gilet-fox.cyclic.app/findByEmail?category=books&email=${email}`)
